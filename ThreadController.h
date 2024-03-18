@@ -19,7 +19,9 @@
 #include "Thread.h"
 #include "inttypes.h"
 
+#ifndef MAX_THREADS
 #define MAX_THREADS		32
+#endif
 
 class ThreadController: public Thread{
 protected:
