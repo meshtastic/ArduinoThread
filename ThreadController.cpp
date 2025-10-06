@@ -105,7 +105,7 @@ bool ThreadController::add(Thread* _thread){
 void ThreadController::remove(size_t id){
 	// Find Threads with the id, and removes
 	for(int i = 0; i < MAX_THREADS; i++){
-		if(thread[i]->ThreadID == id){
+		if(thread[i] && thread[i]->ThreadID == id){
 			thread[i] = NULL;
 			cached_size--;
 			return;
